@@ -15,10 +15,8 @@
 ln ~/dot-files/.bashrc ~/.bashrc
 ln ~/dot-files/.vimrc ~/.vimrc
 ln ~/dot-files/.tmux.conf ~/.tmux.conf
-ln ~/dot-files/yaml.vim ~/.vim/after/syntax/yaml.vim
+ln -s ~/dot-files/.vim ~/.vim
 ```
-
-Note: You may need to rename the default yaml.vim in /usr/share/vim/vim74/syntax/yaml.vim yaml.vim.old
 
 2) Only update the files inside the ~/dot-files repository
 
