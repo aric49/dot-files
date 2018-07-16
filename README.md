@@ -20,6 +20,8 @@ ln ~/dot-files/.tmux.conf ~/.tmux.conf
 ```
 2) Update the config.cson in Atom by using `CTRL+SHIFT+P` and typing `config` into the main editor window. Copy in the contents of config.cson.
 
+3) For the .bashrc, copy or symlink `.bashrc_customizations` to your home directroy and ensure the `if` stanza is present at the bottom of your default `.bashrc` file.
+
 3) Only update the files inside the ~/dot-files repository
 
 
