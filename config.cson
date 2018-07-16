@@ -13,7 +13,6 @@
     softWrap: true
     softWrapAtPreferredLineLength: true
   "exception-reporting":
-    userId: "ff498a1a-11c7-487e-916f-6170cc72cf25"
   minimap:
     absoluteMode: true
     adjustAbsoluteModeHeight: true
