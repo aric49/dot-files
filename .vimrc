@@ -1,5 +1,5 @@
 "VIM Configuration
-"Last Updated 7/13/2016
+"Last Updated 7/16/2018
 
 
 "Common Settings
@@ -7,7 +7,7 @@ syntax on
 set autoindent
 set number
 set ruler
-colors molokai_dark
+colors industry
 
 "Sane Splits
 set splitbelow

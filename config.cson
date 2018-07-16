@@ -1,0 +1,20 @@
+#CTRL-SHIFT-P "Config" in fuzzy finder.
+"*":
+  "autocomplete-plus":
+    confirmCompletion: "tab always, enter when suggestion explicitly selected"
+  core:
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    showIndentGuide: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+  "exception-reporting":
+  minimap:
+    absoluteMode: true
+    adjustAbsoluteModeHeight: true
+  welcome:
+    showOnStartup: false
