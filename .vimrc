@@ -7,7 +7,7 @@ syntax on
 set autoindent
 set number
 set ruler
-colors molokai_dark
+colors industry
 
 "Sane Splits
 set splitbelow
