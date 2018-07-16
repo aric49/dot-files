@@ -2,6 +2,7 @@
 ##Backup of my Linux dot files
 
 ### Applications using these dot files:
+
 **TMUX** - .tmux.conf
 
 **VIM** - .vimrc, yaml.vim
