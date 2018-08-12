@@ -8,3 +8,6 @@ alias dotnetcore='docker run --rm  --workdir="/systemfiles" --env="HOME=/tmp" -i
 alias ubuntuclean='docker run --rm --workdir="/systemfiles" --env="HOME=/tmp"  -it -v $PWD:/systemfiles ubuntu:latest /bin/bash'
 alias python2env='docker run --rm --user `id -u` --workdir="/systemfiles" --env="HOME=/tmp" --env="USER=aric" -it -v $PWD:/systemfiles python:2.7.14-jessie /bin/bash'
 alias python3env='docker run --rm --user `id -u` --workdir="/systemfiles" --env="HOME=/tmp" --env="USER=aric" -it -v $PWD:/systemfiles python:3.6.4-jessie /bin/bash'
+
+#VPN
+alias openconnect='sudo openconnect https://portal.censored.com --certificate ~/Documents/AC_Cert/AnyConnectCert.pfx'
