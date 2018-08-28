@@ -2,12 +2,15 @@
 set -o vi
 export EDITOR=vi
 
-alias powershell='docker run --rm --user `id -u` --workdir="/systemfiles" --env="HOME=/tmp" --env="USER=aric" -it -v $PWD:/systemfiles microsoft/powershell:ubuntu16.04'
+generateAccessKey=$(shuf -n 2 /usr/share/dict/british-english | sed 's/./\u&/' | tr -d "\n" | tr -d "'")
+generateSecretKey=$(shuf -n 4 /usr/share/dict/british-english | sed 's/./\u&/' | tr -d "\n" | tr -d "'")
+
+alias powershell='docker run --rm --workdir="/systemfiles" --env="HOME=/tmp" --env="USER=aric" -it -v $PWD:/systemfiles quay.io/aric49/powershell:latest'
 alias dind='docker run --privileged -d --rm --name dind --workdir="/systemfiles" -it -v $PWD:/systemfiles docker:dind && docker exec -it dind /bin/sh; docker stop dind'
 alias dotnetcore='docker run --rm  --workdir="/systemfiles" --env="HOME=/tmp" -it -v $PWD:/systemfiles microsoft/aspnetcore-build:2.0.0'
 alias ubuntuclean='docker run --rm --workdir="/systemfiles" --env="HOME=/tmp"  -it -v $PWD:/systemfiles ubuntu:latest /bin/bash'
 alias python2env='docker run --rm --user `id -u` --workdir="/systemfiles" --env="HOME=/tmp" --env="USER=aric" -it -v $PWD:/systemfiles python:2.7.14-jessie /bin/bash'
 alias python3env='docker run --rm --user `id -u` --workdir="/systemfiles" --env="HOME=/tmp" --env="USER=aric" -it -v $PWD:/systemfiles python:3.6.4-jessie /bin/bash'
-
+alias minio='docker run --rm --user user -e MINIO_ACCESS_KEY=$generateAccessKey -e MINIO_SECRET_KEY=$generateSecretKey -p 80:9000 -v $PWD:/data --name minio1 minio:1 server /data'
 #VPN
 alias openconnect='sudo openconnect https://portal.censored.com --certificate ~/Documents/AC_Cert/AnyConnectCert.pfx'
