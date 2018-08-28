@@ -5,7 +5,7 @@ export EDITOR=vi
 generateAccessKey=$(shuf -n 2 /usr/share/dict/british-english | sed 's/./\u&/' | tr -d "\n" | tr -d "'")
 generateSecretKey=$(shuf -n 4 /usr/share/dict/british-english | sed 's/./\u&/' | tr -d "\n" | tr -d "'")
 
-alias powershell='docker run --rm --workdir="/systemfiles" --env="HOME=/tmp" --env="USER=aric" -it -v $PWD:/systemfiles quay.io/aric49/powershell:latest'
+alias powershell='docker run --rm --workdir="/systemfiles" --env="HOME=/tmp" -it -v $PWD:/systemfiles quay.io/aric49/powershell:latest'
 alias dind='docker run --privileged -d --rm --name dind --workdir="/systemfiles" -it -v $PWD:/systemfiles docker:dind && docker exec -it dind /bin/sh; docker stop dind'
 alias dotnetcore='docker run --rm  --workdir="/systemfiles" --env="HOME=/tmp" -it -v $PWD:/systemfiles microsoft/aspnetcore-build:2.0.0'
 alias ubuntuclean='docker run --rm --workdir="/systemfiles" --env="HOME=/tmp"  -it -v $PWD:/systemfiles ubuntu:latest /bin/bash'
