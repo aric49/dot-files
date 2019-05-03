@@ -1,0 +1,9 @@
+{
+    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.minimap.enabled": false,
+    "editor.cursorBlinking": "phase",
+    "window.zoomLevel": 0
+}

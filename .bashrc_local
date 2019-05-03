@@ -2,15 +2,27 @@
 set -o vi
 export EDITOR=vi
 
-generateAccessKey=$(shuf -n 2 /usr/share/dict/british-english | sed 's/./\u&/' | tr -d "\n" | tr -d "'")
-generateSecretKey=$(shuf -n 4 /usr/share/dict/british-english | sed 's/./\u&/' | tr -d "\n" | tr -d "'")
+#colorize the prompt!
+PS1='\[\033[01;34m\][\u@\h\[\033[00m\]:\[\033[01;36m\]\w]\[\033[00m\]\$ '
+
+#generateAccessKey=$(shuf -n 2 /usr/share/dict/words | sed 's/./\u&/' | tr -d "\n" | tr -d "'")
+#generateSecretKey=$(shuf -n 4 /usr/share/dict/words | sed 's/./\u&/' | tr -d "\n" | tr -d "'")
 
 alias powershell='docker run --rm --workdir="/systemfiles" --env="HOME=/tmp" -it -v $PWD:/systemfiles quay.io/aric49/powershell:latest'
+alias crt='docker run -itd --privileged --rm -e DISPLAY=$DISPLAY -e XDG_RUNTIME_DIR=/run/user/1000 -e XAUTHORITY=$XAUTHORITY -v /run/user/1000:/run/user/1000 -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/dri:/dev/dri -v /home/aric/.local/share/cool-retro-term:/home/user/.local/share/cool-retro-term quay.io/aric49/crt-toolkit:latest'
 alias dind='docker run --privileged -d --rm --name dind --workdir="/systemfiles" -it -v $PWD:/systemfiles docker:dind && docker exec -it dind /bin/sh; docker stop dind'
 alias dotnetcore='docker run --rm  --workdir="/systemfiles" --env="HOME=/tmp" -it -v $PWD:/systemfiles microsoft/aspnetcore-build:2.0.0'
-alias ubuntuclean='docker run --rm --workdir="/systemfiles" --env="HOME=/tmp"  -it -v $PWD:/systemfiles ubuntu:latest /bin/bash'
+alias dotnetcorebuild='docker run --rm  --workdir="/systemfiles" --env="HOME=/tmp" -it -v $PWD:/systemfiles microsoft/dotnet:2.1-sdk'
+alias ubuntuclean='docker run --privileged --rm --workdir="/systemfiles" --env="HOME=/tmp"  -it -v $PWD:/systemfiles ubuntu:latest /bin/bash'
 alias python2env='docker run --rm --user `id -u` --workdir="/systemfiles" --env="HOME=/tmp" --env="USER=aric" -it -v $PWD:/systemfiles python:2.7.14-jessie /bin/bash'
 alias python3env='docker run --rm --user `id -u` --workdir="/systemfiles" --env="HOME=/tmp" --env="USER=aric" -it -v $PWD:/systemfiles python:3.6.4-jessie /bin/bash'
-alias minio='docker run --rm --user user -e MINIO_ACCESS_KEY=$generateAccessKey -e MINIO_SECRET_KEY=$generateSecretKey -p 80:9000 -v $PWD:/data --name minio1 minio:1 server /data'
-#VPN
-alias openconnect='sudo openconnect https://portal.censored.com --certificate ~/Documents/AC_Cert/AnyConnectCert.pfx'
+alias hacksaw='docker run --rm -it -v $PWD:/workdir quay.io/aric49/hacksaw:latest'
+alias openconnect='sudo openconnect https://vpn.company.com --certificate ~/Documents/AC_Cert/AnyConnectCert-arenzo-securepass.pfx'
+alias terraform='docker run --rm -it -v $PWD:/workdir --workdir="/workdir" --entrypoint=/bin/sh hashicorp/terraform:light'
+alias lt_vpn='globalprotect connect --portal vpn.company.com'
+alias lt_vpn_status='globalprotect show --details'
+alias lt_vpn_disconnect='globalprotect disconnect'
+alias lt_vpn2='sudo openconnect --protocol=gp vpn1.lendingtree.com'
+alias redis_cli='docker run --rm -it redis:latest /bin/bash'
+alias fix_aws_workspace='echo "Directory Dump Before Fix......" && ls -la ~/.wine/drive_c/Program\ Files\ \(x86\)/Amazon\ Web\ Services\,\ Inc/Amazon\ WorkSpaces/vchan_plugins/ && rm ~/.wine/drive_c/Program\ Files\ \(x86\)/Amazon\ Web\ Services\,\ Inc/Amazon\ WorkSpaces/vchan_plugins/pcoip_vchan_remoteprintclient.dll && echo "Directory Dump After Fix..." && ls -la ~/.wine/drive_c/Program\ Files\ \(x86\)/Amazon\ Web\ Services\,\ Inc/Amazon\ WorkSpaces/vchan_plugins/'
+alias tb='nc termbin.com 9999'
