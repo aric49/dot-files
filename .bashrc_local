@@ -22,8 +22,7 @@ alias terraform='docker run --rm -it -v $PWD:/workdir --workdir="/workdir" --ent
 alias lt_vpn='globalprotect connect --portal vpn.company.com'
 alias lt_vpn_status='globalprotect show --details'
 alias lt_vpn_disconnect='globalprotect disconnect'
+alias lt_vpn2='sudo openconnect --protocol=gp vpn1.lendingtree.com'
 alias redis_cli='docker run --rm -it redis:latest /bin/bash'
 alias fix_aws_workspace='echo "Directory Dump Before Fix......" && ls -la ~/.wine/drive_c/Program\ Files\ \(x86\)/Amazon\ Web\ Services\,\ Inc/Amazon\ WorkSpaces/vchan_plugins/ && rm ~/.wine/drive_c/Program\ Files\ \(x86\)/Amazon\ Web\ Services\,\ Inc/Amazon\ WorkSpaces/vchan_plugins/pcoip_vchan_remoteprintclient.dll && echo "Directory Dump After Fix..." && ls -la ~/.wine/drive_c/Program\ Files\ \(x86\)/Amazon\ Web\ Services\,\ Inc/Amazon\ WorkSpaces/vchan_plugins/'
-
 alias tb='nc termbin.com 9999'
-
