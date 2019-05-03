@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=remmina -i
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Remmina
+Name=Remmina
+Comment[en_US]=Starts remmina desktop indicator
+Comment=Starts remmina desktop indicator
