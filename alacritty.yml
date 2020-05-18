@@ -1,7 +1,8 @@
 # Alacritty Config Forked from: https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml
-#
-# Rquires FiraCode font:  https://github.com/tonsky/FiraCode/wiki/Installing
-#
+# #####################################
+# Requires FiraCode font:  https://github.com/tonsky/FiraCode/wiki/Installing
+# Location: ~/.config/alacritty/alacritty.yml
+# SymLink: ln -s ~/Development/GitHub/dot-files/alacritty.yml ~/.config/alacritty/alacritty.yml
 #
 # Window Customization
 window:

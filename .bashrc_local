@@ -8,6 +8,7 @@ PS1='\[\033[01;34m\][\u@\h\[\033[00m\]:\[\033[01;36m\]\w]\[\033[00m\]\$ '
 
 #generateAccessKey=$(shuf -n 2 /usr/share/dict/words | sed 's/./\u&/' | tr -d "\n" | tr -d "'")
 #generateSecretKey=$(shuf -n 4 /usr/share/dict/words | sed 's/./\u&/' | tr -d "\n" | tr -d "'")
+alias vim='vimx'
 alias docker='podman'
 alias docker-compose='podman-compose'
 alias powershell='docker run --rm --workdir="/systemfiles" -it -v $PWD:/systemfiles microsoft/powershell:latest'
