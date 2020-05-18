@@ -10,6 +10,8 @@ filetype plugin on
 set number
 set ruler
 colors koehler
+set pastetoggle=<F2>
+set mouse=a
 
 "Sane Splits
 set splitbelow
