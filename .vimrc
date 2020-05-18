@@ -5,9 +5,11 @@
 "Common Settings
 syntax on
 set autoindent
+set nocompatible
+filetype plugin on
 set number
 set ruler
-colors industry
+colors koehler
 
 "Sane Splits
 set splitbelow
@@ -34,3 +36,6 @@ set clipboard=unnamedplus
 function! KillWhiteSpace()
   %s/\s\+$//e
 endfunction
+
+
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
