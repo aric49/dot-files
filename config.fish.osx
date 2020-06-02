@@ -6,6 +6,7 @@
 set EDITOR vi
 set ANSIBLE_HOST_KEY_CHECKING False
 set CURRENT_SHELL_SESSION Fish
+set PATH ~/bin $PATH
 
 #Define Aliases
 
