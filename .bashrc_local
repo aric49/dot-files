@@ -1,3 +1,6 @@
+#BashRC Extensions without modifying the original .bashrc
+#SymLink: ln -s ~/Development/GitHub/dot-files/.bashrc_local ~/.bashrc_local
+
 #Extends .bashrc with shortcuts and Docker work environments
 set -o vi
 export EDITOR=vi

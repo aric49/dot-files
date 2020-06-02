@@ -1,4 +1,5 @@
 #Default Fedora 30 .bashrc
+# Paste this at the bottom of the default .bashrc
 # .bashrc
 
 # Source global definitions

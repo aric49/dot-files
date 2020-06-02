@@ -1,5 +1,6 @@
 "VIM Configuration
 "Last Updated 7/16/2018
+"SymLink: ln -s ~/Development/GitHub/dot-files/.vimrc ~/.vimrc
 
 
 "Common Settings

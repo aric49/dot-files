@@ -1,6 +1,6 @@
-#Tmux Configuration File
+#Tmux Configuration File - MacOS
 #Last Updated - 6/2/2020
-#SymLink: ln -s ~/Development/GitHub/dot-files/.tmux.conf ~/.tmux.conf
+#SymLink: ln -s ~/Development/GitHub/dot-files/.tmux.conf.osx ~/.tmux.conf
 
 #Bindings
 #Synchronize Paynes with Prefix + CTRL+X
@@ -17,12 +17,11 @@ set -g status-bg black
 set -g status-fg cyan
 
 #256 Colors in Terminal
-set -g default-terminal "tmux-256color"
+set -g default-terminal "xterm-256color"
 
-#OLD Setting. Use for weirdness in terminal displays
-#set -g default-terminal "xterm-256colors"
 
 #Set Mouse mode
 set -g mouse on
 
-set-option -g default-shell /usr/bin/fish
+#Set default terminal to fish
+set-option -g default-shell /usr/local/bin/fish
