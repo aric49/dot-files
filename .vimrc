@@ -7,6 +7,11 @@
 syntax on
 set autoindent
 set nocompatible
+
+" Comment the set backspace out if it doesn't work in Linux
+set backspace=eol,indent,start
+
+
 filetype plugin on
 set number
 set ruler
@@ -32,8 +37,9 @@ set shiftwidth=2
 set expandtab
 
 
-"Clipboard Support
-set clipboard=unnamedplus
+"Clipboard Support - Setting to be crossplatform as possible
+"   Linux uses unamedplus
+set clipboard^=unnamed,unnamedplus
 
 "Removes trailing white spaces using :call KillWhiteSpace()
 function! KillWhiteSpace()
