@@ -9,8 +9,6 @@ set CURRENT_SHELL_SESSION Fish
 
 #Define Aliases
 alias docker="podman"
-alias vim="vimx"
-alias lt_vpn2="sudo openconnect --protocol=gp vpn.lendingtree.com"
 alias redis_cli="podman run --rm -it redis:latest /bin/bash"
 alias mongo_cli="podman run --rm -it mongo:latest /bin/bash"
 alias powershell="podman run --rm -it -v $PWD:/files --workdir=/files microsoft/powershell:latest"
